@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Todo list</h1>
+    <div class="static-wrapper">
+        <div class="add-form">
+            <div class="form-group description-text-area">
+                <label for="taskDescription">Description:</label>
+                <input type="text" class="form-control" id="taskDescription">
+            </div>
+            <div class="form-group date-pick-area">
+                <label for="taskDate">Date:</label>
+                <input type="datetime-local" class="form-control" id="taskDate">
+            </div>
+            <button id="addTaskBtn" class="btn btn-primary btn-block">Add Task</button>
+        </div>
+        <div class="date-filters">
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" class="form-control" id="startDate">
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date:</label>
+                <input type="date" class="form-control" id="endDate">
+            </div>
+            <div class="filters-btn">
+                <button id="filterTasksBtn" class="btn btn-primary btn-block">Filter Tasks</button>
+                <button id="clearFiltersBtn" class="btn btn-secondary btn-block">Clear filters</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div id="taskListContainer">
+        @Html.Partial("_TaskList")
+    </div>
+</div>

@@ -1,0 +1,81 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.static-wrapper{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap:5rem;
+}
+
+.add-form {
+    display: flex;
+    gap: 2rem;
+    flex-flow: wrap-reverse;
+}
+
+.description-text-area {
+    width: 30rem;
+}
+
+    .description-text-area label {
+        width: 100%;
+        text-align: left;
+    }
+
+.date-pick-area {
+    width: 13rem;
+}
+
+    .date-pick-area label {
+        width: 100%;
+        text-align: left;
+    }
+
+#addTaskBtn{
+    width:6rem;
+    height: 2.5rem;
+}
+
+.date-filters {
+    display: flex;
+    gap: 3rem;
+}
+
+.date-filters .form-group {
+    width: 15rem;
+}
+
+    .date-filters .form-group label {
+        width: 100%;
+        text-align: left;
+    }
+
+.filters-btn {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap-reverse;
+}
+
+    .filters-btn button {
+        width: 8rem;
+        height: 2.5rem;
+    }
