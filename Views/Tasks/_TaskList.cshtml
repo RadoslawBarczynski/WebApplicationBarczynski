@@ -1,5 +1,12 @@
 ﻿@model IEnumerable<WebApplicationBarczynski.Models.Tasks>
 
+
+@if (!Model.Any())
+{
+    <p>Brak danych</p>
+}
+else
+{
 <table class="table">
     <thead>
         <tr>
@@ -12,7 +19,9 @@
     <tbody>
         @foreach (var task in Model)
         {
-            <tr>
+                <tr @if (task.CompletedP) {
+        <text>class="completed"</text>
+ }>
                 <td>@task.Description</td>
                 <td>@task.Date</td>
                 <td>
@@ -56,3 +65,4 @@
         </div>
     </div>
 </div>
+}

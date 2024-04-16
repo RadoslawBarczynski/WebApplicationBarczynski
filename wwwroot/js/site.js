@@ -126,7 +126,7 @@ $("#taskListContainer").on("click", "#updateTaskBtn", function () {
     });
 })
 
-$("#editTaskModal").on("click", ".close", function () {
+$(document).on("click", ".close", function () {
     $("#editTaskModal").modal("hide");
 })
 
@@ -138,3 +138,15 @@ function formatDateForInput(dateString) {
     var formattedDate = datePart[2] + '-' + datePart[1] + '-' + datePart[0] + 'T' + timePart[0] + ':' + timePart[1];
     return formattedDate;
 }
+
+$(document).on("click", ".completedCheckbox", function () {
+    $('.table').on('change', '.completedCheckbox', function () {
+        var row = $(this).closest('tr');
+        if ($(this).is(':checked')) {
+            row.addClass('completed');
+        } else {
+            row.removeClass('completed');
+        }
+    });
+});
+

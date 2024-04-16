@@ -79,3 +79,8 @@ body {
         width: 8rem;
         height: 2.5rem;
     }
+
+.completed {
+    text-decoration: line-through;
+}
+
